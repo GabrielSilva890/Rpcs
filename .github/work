@@ -1,0 +1,7 @@
+.\tools\hydrate_rpcsx_core_deps.ps1
+.\gradlew.bat :app:assembleDebug -PbuildBundledRpcsxCore=false
+.\tools\start_thor_debug_stream.ps1 -ClearLogcat -Launch -Label game-name
+.\tools\summarize_thor_debug_stream.ps1 -Latest
+.\tools\stop_thor_debug_stream.ps1 -Latest
+.\tools\collect_thor_debug.ps1 -Label game-name
+debug-captures/
